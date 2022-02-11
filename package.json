@@ -4,7 +4,7 @@
   "description": "1 header com titulo da pagina, nav com os links para acessar diferentes partes do site. [MAJU]",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -13,6 +13,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
   "bugs": {
     "url": "https://github.com/ThiagoTrybe19/Divertidamente/issues"
   },
