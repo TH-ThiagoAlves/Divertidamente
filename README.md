@@ -7,7 +7,7 @@
 ⚠️ **Esse projeto tem um fluxo um pouco diferente dos outros. Os passos 1 a 6 devem ser feitos por uma pessoa da dupla (a que vai criar a branch de trabalho). A outra pessoa deve fazer apenas o passo 1 e depois mudar para a branch criada pela primeira pessoa. Exemplo:**
 
 ```bash
-git checkout joao-silva-trybewarts
+git checkout project-bonus
 ```
 
 1. Clone o repositório
