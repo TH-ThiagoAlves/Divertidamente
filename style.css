@@ -87,6 +87,7 @@ hr {
     margin:20px;
     font-size: 30px;
 }
+
 .introduction form
 
 .diary {
@@ -95,6 +96,7 @@ hr {
     align-items: center;
     padding: 40px;
 }
+
 .diary textarea {
     background-color: rgba(255, 255, 255, 0.315);
     border: 2px solid var(--icones);
