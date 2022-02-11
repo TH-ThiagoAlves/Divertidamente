@@ -85,13 +85,9 @@ git checkout joao-silva-trybewarts
 
 # Como desenvolver
 
-Você irá desenvolver este projeto em **dupla** e é fundamental que siga as instruções do repositório.
+Você irá desenvolver este projeto em **quarteto** e é fundamental que siga as instruções do repositório.
 
-Todos os requisitos tem como base a página a seguir, que representa um formulário de avaliação da **Escola de Magia de Trybewarts**. Use a imagem do site como base e respeite o posicionamento dos elementos, mas quanto às cores e elementos de design que não interfiram nesses aspectos sinta-se livre para deixar a sua criatividade fluir!
-
-![Página da Trybewarts](./pagina-principal.png)
-
----
+Todos os requisitos tem como base a página a seguir, que representa um formulário de avaliação da **Escola de Magia de Trybewarts**. Use a imagem da maju como base e respeite o posicionamento dos elementos, mas quanto às cores e elementos de design que não interfiram nesses aspectos sinta-se livre para deixar a sua criatividade fluir!
 
 # Requisitos do projeto
 
