@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divertidamente</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer ></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divertidamente</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <form>
+    <h1>Qual foi a sua emoção mais frequente?</h1>
+    <input type="checkbox" name="happiness" id="">
+    <input type="checkbox" name="rage" id="">
+    <input type="checkbox" name="fear" id="">
+    <input type="checkbox" name="disgust" id="">
+    <input type="checkbox" name="sadness" id="">
     
+    <label for="">Gatilho: que situações dispararam essa emoção em você?
+        <input type="text" name="trigger" id="">
+    </label>
+    
+    <label for="your-reaction">Sua reação: como você efetivamente agiu após essa emoção?
+        <input type="text" name="your-reaction" id="">
+    </label>
+    
+    <label for="alternative reactions">Reações alternativas: de que outras maneiras você poderia ter reagido?
+        <input type="text" name="alternative-reactions" id="">
+    </label>
+    
+    <button>Enviar</button>
+  </form>
 </body>
 </html>
