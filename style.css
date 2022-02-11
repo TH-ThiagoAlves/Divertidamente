@@ -102,3 +102,35 @@ hr {
     padding: 10px;
     color: white;
 }
+
+ input {
+    width: 200px;
+    padding: 7px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-size: 13px;
+    border: none;
+    background-color: transparent ;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    transition: all 1s ease-in-out;
+    margin: 10px;
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: #FF5757;
+    font-weight: 900;
+  }
+
+  
+  .sentimento {
+    display:flex;
+    list-style-type: none;
+    gap: 45px;
+    
+}
+
+.emotImg{
+    max-width: 65px;
+}
+    
