@@ -93,22 +93,68 @@ Todos os requisitos tem como base a página a seguir, que representa um formulá
 
 ---
 
-1 header com titulo da pagina, nav com os links para acessar diferentes partes do site. [MAJU]
+# Requisitos do projeto
 
-2 section com um formulario de dados do usario nome, sexo, se pessoa prefere linguagem neutra. [MAJU]
+### 1. Criar um Header com titulo da pagina, nav com os links para acessar diferentes partes do site. `[MAJU]`
 
-3 section pra pessoa responder perguntas sobre suas emoções text area. [THIAGO]
+#### Observações técnicas:
 
-4 campo de emojis que recupere a informação de qual a pessoa escolheu. [YUUT]
+* Este header deve possuir a classe `header`
+* O Hearder deve possuir uma nav bar `header`
+* Cada elemento deve possuir uma classe `header`
 
-5 section pra pessoa anotar sentimentos e pensamentos text area. [MAJU]
+### 2. Acrescente uma section com um formulario de dados do usario `nome`, `sexo`, se pessoa prefere linguagem neutra. `[MAJU]`
 
-6 guardar informações no local sotorage. [THIAGO]
+#### Observações técnicas:
 
-7 section retornar o grafico de emções. [YUUT]
+* Deve existir um input name `project-bonus-input-name`
+* Deve existir um input para opção sexual `project-bonus-input-sex`
 
-8 campo de busca para as anotações de cada dia que vai ser recuperado com o date. [VERONICA]
+### 3. Acrescente uma section pra pessoa responder perguntas sobre suas emoções text area. `[THIAGO]`
 
-9 campos para recomendação de conteudo. [TODOS]
+#### Observações técnicas:
 
-10 implementação de teste jest. [VERONICA]
+* Essa section deve possuir no minimo 4 perguntas `project-bonus-questions`
+
+### 4. campo de emojis que recupere a informação de qual a pessoa escolheu. `[YUUT]`
+
+#### Observações técnicas:
+
+* Utilize um checkbox para pegar os emojis `checkbox`
+
+### 5. section pra pessoa anotar sentimentos e pensamentos. `[MAJU]`
+
+#### Observações técnicas:
+
+* Deve existir um textarea `textarea`
+
+### 6. guardar informações no local storage. `[THIAGO]`
+
+#### Observações técnicas:
+
+* Guarde as informações do form no local storage
+
+### 7. section retornar o grafico de emções. `[YUUT]`
+
+#### Observações técnicas:
+
+* Retorne o grafico utilizando a api
+
+### 8. campo de busca para as anotações de cada dia que vai ser recuperado com o date. `[VERONICA]`
+
+#### Observações técnicas:
+
+* Deverá haver um campo de busca funcional
+
+### 9. campos para recomendação de conteudo. `[TODOS]`
+
+#### Observações técnicas:
+
+* Deverá conter pelo menos um artigo e um video para cada emoção
+
+### 10. implementação de teste jest. `[VERONICA]`
+
+#### Observações técnicas:
+
+* Implemente no mínimo 1 teste para uma Hof
+---
