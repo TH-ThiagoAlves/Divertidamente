@@ -1,0 +1,20 @@
+{
+  "name": "Divertidamente",
+  "version": "1.0.0",
+  "description": "1 header com titulo da pagina, nav com os links para acessar diferentes partes do site. [MAJU]",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoTrybe19/Divertidamente.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoTrybe19/Divertidamente/issues"
+  },
+  "homepage": "https://github.com/ThiagoTrybe19/Divertidamente#readme"
+}
