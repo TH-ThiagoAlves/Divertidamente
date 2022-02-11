@@ -28,6 +28,10 @@ header {
     font-size: 30px;
 }
 
+.navBar img {
+
+}
+
 .banner {
     display: flex;
     justify-content: flex-end;
