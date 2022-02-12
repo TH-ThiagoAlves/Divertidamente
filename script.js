@@ -57,10 +57,7 @@ const temporizador = () => {
       return li(); 
   } 
 }
-
-
-
-
+  
 
 
 window.onload = () => {
