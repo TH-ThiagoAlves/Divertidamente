@@ -1,18 +1,20 @@
 /* Constantes globais*/
 
+// button.addEventListener();
 const button = document.querySelector('button')
 const form = document.querySelector('form');
 let data = [0, 0, 0, 0, 0];
 
 /* button.addEventListener('click', guardedFeelings);  não existe nenhum elemento no html com a classe, id ou tag button no html o addevente ta quebrando todo codigo js devido a isso deixei comentado!*/
 
-const menuHamburguer = () => {
-    const menu = document.querySelector("#menu");
-    menu.addEventListener('click', () => {
-        const imgMenu = document.querySelector("#img-hamburguer");
-        menu.removeChild(imgMenu);
-    });
-}
+// const clickMenu = () => {
+//     const menu = document.querySelector('.nav-bar');
+//     menu.addEventListener('click', () => {
+//         document.getElementById('menu').classList.toggle('change');
+//         document.getElementById('nav').classList.toggle('change');
+//         document.getElementById('menu-bg').classList.toggle('change');
+//     })
+// }
  
 /* sentimentos e graficos */
 
@@ -62,6 +64,5 @@ const temporizador = () => {
 
 
 window.onload = () => {
-    menuHamburguer();
     li();
 }
