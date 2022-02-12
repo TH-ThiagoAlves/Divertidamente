@@ -4,16 +4,6 @@ const button = document.querySelector('button')
 const form = document.querySelector('form');
 let data = [0, 0, 0, 0, 0];
 
-/* API */
-
-const graficoApi = async () => {
-};
-
-
-const guardedFeelings = () => {
-    localStorage.setItem('feelings', form.innerHTML)
-}
- 
 /* button.addEventListener('click', guardedFeelings);  não existe nenhum elemento no html com a classe, id ou tag button no html o addevente ta quebrando todo codigo js devido a isso deixei comentado!*/
 
 const menuHamburguer = () => {
@@ -24,7 +14,7 @@ const menuHamburguer = () => {
     });
 }
  
-// sentimentos //
+/* sentimentos e graficos */
 
 const li = () => {
     document.querySelectorAll('.emoção').forEach(element => {
@@ -56,8 +46,20 @@ const sumEmot = (event) => {
             armz.removeEventListener('click', sumEmot)
             break
     } 
-    console.log(data)
 }; 
+let dateSaved = new Date(); // o valor de date saved precisa ser salvo quando o formulario for enviado e puxado de volta pra fazer a comparação.
+let dateAtual = new Date();
+
+const temporizador = () => {
+  if (dateSaved.getDay !== dateAtual.getDay) {
+      return li(); 
+  } 
+}
+
+
+
+
+
 
 window.onload = () => {
     menuHamburguer();
