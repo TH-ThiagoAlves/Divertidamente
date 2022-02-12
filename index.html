@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,29 +13,31 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <header>
-    <div id="menu" class="logo">
-      <img src="images/mandala-rosa-logo.svg" id="img-hamburguer" alt="LOGO">
-    </div>
-    <div class="title">
-      <h1 id="title-feelin">Feelin</h1>
-    </div>
-    <div class="navBar">
-      <img src="images/Hamburger_icon.svg" alt="NAV">
-    </div>
+    <img src="images/mandala-rosa-logo.svg" id="logo-mandala-pink" alt="LOGO">
+
+    <h1 class="title" id="title-feelin">Feelin</h1>
+
+    <nav class="nav-bar">
+      <div class='sandwich'></div>
+      <div class='sandwich'></div>
+      <div class='sandwich'></div>
+    </nav>
   </header>
-  <!-- ############### BANNER ##################### -->
+
   <section class="banner">
     <div class="text">
       <h2>titulo do texto</h2>
         <p>texto explicando os objetivos e
-           como utilizar o site de forma
-           remida pratica e objetiva.
+          como utilizar o site de forma
+          remida pratica e objetiva.
         </p>
     </div>
   </section>
-  <!-- ############### CONTEÚDO ##################### -->
+
+
   <main>
     <section class="intro">
       <img src="images/mandala-branca.svg" class="mandala-first">
@@ -44,39 +47,39 @@
         <hr>
         <p>Para tornar melhor sua experiencia por gentileza informe seu nome e pronomes.</p>
 
-        <input type="text" name="" id="" placeholder="Qual é o seu nome...">
-        <select name="pronouns" id="pronouns" >
-          <option value="ela/dela">Ela/Dela</option>
-          <option value="ele/dele">Ele/Dele</option>
-          <option value="neutro" selected>Neutro</option>
-        </select>
+        <form action="">
+          <input type="text" class="inputLine" name="" id="" placeholder="Nome...">
+          <select name="pronouns" id="pronouns">
+            <option value="neutro" selected>Neutro</option>
+            <option value="ela/dela">ela/dela</option>
+            <option value="ele/dele">ele/dele</option>
+          </select>
+        </form>
       </div>
-    </section>
+   </section>
 
-    <section id="diary-self-knowledge">
-      <div class="self-knowledge-mandala">
-        <img src="images/mandala-branca.svg" class="mandala-second">
-      </div>
+   <section id="diary-self-knowledge">
+      <img src="images/mandala-branca.svg" class="self-knowledge-mandala mandala-second">
+
       <div class="self-knowledge-form">
         <h1 id="title-question-feeling">Como você está se sentindo hoje 
           <span id="name-self-knowledge">nome</span>?
         </h1>
         <ul class="sentimento">
-          <li class="emoção" id="raiva" onclick="sumEmoc()"> 
-            <img class="emotImg" src="bravo.png"   alt="raiva">      
+          <li class="emoção" id="alegria"  onclick="sumEmoc()">
+            <img class="emotImg" src="alegria.png" alt="alegria">
           </li>
           <li class="emoção" id="tristeza" onclick="sumEmoc()"> 
             <img class="emotImg" src="triste.png"  alt="tristeza">
+          </li>
+          <li class="emoção" id="raiva" onclick="sumEmoc()"> 
+            <img class="emotImg" src="bravo.png"   alt="raiva">      
           </li>
           <li class="emoção" id="medo"     onclick="sumEmoc()">
             <img class="emotImg" src="medo.png"    alt="medo">
           </li>
           <li class="emoção" id="nojo"     onclick="sumEmoc()"> 
             <img class="emotImg" src="nojo.png"    alt="nojo">
-          </li>
-          <li class="emoção" id="alegria"  onc
-          diary self-knowledgelick="sumEmoc()">
-            <img class="emotImg" src="alegria.png" alt="alegria">
           </li>
         </ul>
 
@@ -94,15 +97,18 @@
         </label>
         
         <button>Enviar</button>
-       </section>
-        <section class="diary">
-            <h2>Nos conte mais sobre seu dia</h2>
-            <textarea name="diary" id="diary" cols="30" rows="10" placeholder="Digite seus pensamentos aqui..."></textarea>
-        </section>
+    </section>
+
+    <section class="diary">
+      <h2>Nos conte mais sobre seu dia</h2>
+      <textarea name="diary" id="diary" cols="30" rows="10"
+        placeholder="Digite seus pensamentos aqui..."></textarea>
+    </section>
   </main>
-    
+
   <footer>
     <p>copyrights © 2022 Divertidamente - All Rights Reserved -</p>
   </footer>
 </body>
+
 </html>
