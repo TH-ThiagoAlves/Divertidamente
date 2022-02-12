@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Divertidamente</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="images/mandala-rosa-logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -57,7 +58,9 @@
         <img src="images/mandala-branca.svg" class="mandala-second">
       </div>
       <div class="self-knowledge-form">
-        <h1 id="title-question-feeling">Como você está se sentindo hoje</h1>
+        <h1 id="title-question-feeling">Como você está se sentindo hoje 
+          <span id="name-self-knowledge">nome</span>?
+        </h1>
         <ul class="sentimento">
           <li class="emoção" id="raiva" onclick="sumEmoc()"> 
             <img class="emotImg" src="bravo.png"   alt="raiva">      
@@ -78,16 +81,16 @@
         </ul>
 
        <section class="questions">
-        <label for="">Gatilho: que situações dispararam essa emoção em você?
-            <input type="text" name="trigger" id="">
+        <label>Gatilho:<br>Que situações dispararam essa emoção em você?
+            <input type="text" name="trigger">
         </label>
         
-        <label for="your-reaction">Sua reação: como você efetivamente agiu após essa emoção?
-            <input type="text" name="your-reaction" id="">
+        <label>Sua reação:<br>Como você efetivamente agiu após essa emoção?
+            <input type="text" name="your-reaction">
         </label>
         
-        <label for="alternative reactions">Reações alternativas: de que outras maneiras você poderia ter reagido?
-            <input type="text" name="alternative-reactions" id="">
+        <label>Reações alternativas:<br>De que outras maneiras você poderia ter reagido?
+            <input type="text" name="alternative-reactions">
         </label>
         
         <button>Enviar</button>
