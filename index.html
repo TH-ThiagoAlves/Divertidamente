@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divertidamente</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divertidamente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.svg" alt="LOGO">
+        <div id="menu" class="logo">
+            <img src="images/mandala-rosa-logo.svg" id="img-hamburguer" alt="LOGO">
         </div>
         <div class="title">
-            <h1>Feelin</h1>
+            <h1 id="title-feelin">Feelin</h1>
         </div>
         <div class="navBar">
             <img src="images/Hamburger_icon.svg" alt="NAV">
         </div>
     </header>
+    <!-- ############### BANNER ##################### -->
     <section class="banner">
         <div class="text">
             <h2>titulo do texto</h2>
-        <p>texto explicando os objetivos e
-            como utilizar o site de forma
-            remida pratica e objetiva.</p>
+            <p>texto explicando os objetivos e
+                como utilizar o site de forma
+                remida pratica e objetiva.
+            </p>
         </div>
     </section>
+    <!-- ############### CONTEÚDO ##################### -->
     <main>
         <section class="intro">
-            <img src="images/background.svg" alt="">
+            <img src="images/mandala-branca.svg" class="mandala-first">
             <div class="introduction">
                 <hr>
                 <h2>Olá tudo bem? é um grande prazer ter você conosco.</h2>
                 <hr>
-                <p>Para tornar melhor sua experiencia por gentileza informe seu nome e
-                    pronomes.</p>
+                <p>Para tornar melhor sua experiencia por gentileza informe seu nome e pronomes.</p>
 
                 <form action="">
                     <input type="text" class="inputLine" name="" id="" placeholder="Nome...">
-                    <select name="pronouns" id="pronouns" >
+                    <select name="pronouns" id="pronouns">
                         <option value="neutro" selected>Neutro</option>
                         <option value="ela/dela">ela/dela</option>
                         <option value="ele/dele">ele/dele</option>
@@ -49,33 +58,42 @@
             </div>
         </section>
 
-        <ul class="sentimento">
-            <li class="emoção" id="raiva"    onclick="sumEmoc()"> <img class="emotImg" src="bravo.png"   alt="raiva">      </li>
-            <li class="emoção" id="tristeza" onclick="sumEmoc()"> <img class="emotImg" src="triste.png"  alt="tristeza">   </li>
-            <li class="emoção" id="medo"     onclick="sumEmoc()"> <img class="emotImg" src="medo.png"    alt="medo">       </li>
-            <li class="emoção" id="nojo"     onclick="sumEmoc()"> <img class="emotImg" src="nojo.png"    alt="nojo">       </li>
-            <li class="emoção" id="alegria"  onclick="sumEmoc()"> <img class="emotImg" src="alegria.png" alt="alegria">    </li>
-        </ul>
-    
-        <section class="diary">
-            <h2>Nos conte mais sobre seu dia</h2>
-            <textarea name="diary" id="diary" cols="30" rows="10"></textarea>
-        </section>
+        <section id="diary-self-knowledge">
+            <div class="self-knowledge-mandala">
+                <img src="images/mandala-branca.svg" class="mandala-second">
+            </div>
+            <div class="self-knowledge-form">
+                <h1 id="title-question-feeling">Como você está se sentindo hoje?</h1>
+                <ul class="sentimento">
+                    <li class="emoção" id="alegria" >
+                        <img class="emotImg" src="alegria.png" alt="alegria">
+                    </li>
+                    <li class="emoção" id="tristeza" >
+                        <img class="emotImg" src="triste.png" alt="tristeza">
+                    </li>
+                    <li class="emoção" id="raiva" >
+                        <img class="emotImg" src="bravo.png" alt="raiva">
+                    </li>
+                    <li class="emoção" id="medo" >
+                        <img class="emotImg" src="medo.png" alt="medo">
+                    </li>
+                    <li class="emoção" id="nojo" >
+                        <img class="emotImg" src="nojo.png" alt="nojo">
+                    </li>
+                </ul>
+
+                <section class="diary">
+                    <h2>Nos conte mais sobre seu dia</h2>
+                    <textarea name="diary" id="diary" cols="30" rows="10"
+                        placeholder="Digite seus pensamentos aqui..."></textarea>
+                </section>
     </main>
-    
-    <label for="">Gatilho: que situações dispararam essa emoção em você?
-        <input type="text" name="trigger" id="">
-    </label>
-    
-    <label for="your-reaction">Sua reação: como você efetivamente agiu após essa emoção?
-        <input type="text" name="your-reaction" id="">
-    </label>
-    
-    <label for="alternative reactions">Reações alternativas: de que outras maneiras você poderia ter reagido?
-        <input type="text" name="alternative-reactions" id="">
-    </label>
-    
-    <button>Enviar</button>
-  </form>
+
+    <footer>
+        <p>copyrights © 2022 Divertidamente - All Rights Reserved -</p>
+    </footer>
 </body>
+
 </html>
+
+<!--  isso aqui estava dentro do onclik da alegria talvez seja parte do codigo de algm: diary self-knowledge  -->
