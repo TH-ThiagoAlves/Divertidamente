@@ -9,6 +9,8 @@
 * {
     margin: 0;
     padding: 0;
+/*     font-family: 'Open Sans', sans-serif; */
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -20,17 +22,13 @@ header {
 }
 
 .logo img{
-    width: 100px;
+    width: 70px;
 }
 
 .title {
     color: var(--icones);
     font-size: 30px;
 }
-
-/* .navBar img {
-
-} */
 
 .banner {
     display: flex;
@@ -61,6 +59,8 @@ main {
 }
 
 hr {
+    width: 70%;
+    margin: 5px;
     border: 1px solid var(--constraste);
     border-radius: 10px;
 }
@@ -100,15 +100,21 @@ hr {
     align-items: center;
     padding: 40px;
 }
+.diary h2 {
+    color: white;
+    font-size: 40px;
+}
+
 .diary textarea {
     background-color: rgba(255, 255, 255, 0.315);
     border: 2px solid var(--icones);
     border-radius: 15px;
     padding: 10px;
     color: white;
+    width: 30%;
 }
 
- input {
+input {
     width: 200px;
     padding: 7px;
     letter-spacing: 1px;
@@ -119,16 +125,29 @@ hr {
     border-bottom: 1px solid rgb(255, 255, 255);
     transition: all 1s ease-in-out;
     margin: 10px;
-  }
+}
 
-
-  ::-webkit-input-placeholder {
+::-webkit-input-placeholder {
     color: #FF5757;
     font-weight: 900;
-  }
+}
+
+select {
+    width: 200px;
+    padding: 7px;
+    letter-spacing: 1px;
+    color: var(--constraste);
+    font-weight: 900;
+    font-size: 13px;
+    border: none;
+    background-color: transparent ;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  
+    margin: 10px;
+}
 
   
-  .sentimento {
+.sentimento {
     display:flex;
     list-style-type: none;
     gap: 45px;
