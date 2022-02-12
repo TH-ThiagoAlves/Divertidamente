@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Divertidamente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -14,12 +17,13 @@
       <img src="images/mandala-rosa-logo.svg" id="img-hamburguer" alt="LOGO">
     </div>
     <div class="title">
-      <h1>Feelin</h1>
+      <h1 id="title-feelin">Feelin</h1>
     </div>
     <div class="navBar">
       <img src="images/Hamburger_icon.svg" alt="NAV">
     </div>
   </header>
+  <!-- ############### BANNER ##################### -->
   <section class="banner">
     <div class="text">
       <h2>titulo do texto</h2>
@@ -29,6 +33,7 @@
         </p>
     </div>
   </section>
+  <!-- ############### CONTEÚDO ##################### -->
   <main>
     <section class="intro">
       <img src="images/mandala-branca.svg" class="mandala-first">
@@ -44,7 +49,6 @@
           <option value="ele/dele">Ele/Dele</option>
           <option value="neutro" selected>Neutro</option>
         </select>
-
       </div>
     </section>
 
@@ -72,24 +76,30 @@
             <img class="emotImg" src="alegria.png" alt="alegria">
           </li>
         </ul>
+
+       <section class="questions">
+        <label for="">Gatilho: que situações dispararam essa emoção em você?
+            <input type="text" name="trigger" id="">
+        </label>
         
-        <label for="trigger">Gatilho: que situações dispararam essa emoção em você?</label>
-        <input type="text" name="trigger" id="trigger">
-
-        <label for="your-reaction">Sua reação: como você efetivamente agiu após essa emoção?</label>
-        <input type="text" name="your-reaction" id="your-reaction">
-
-        <label for="alternative reactions">Reações alternativas: de que outras maneiras você poderia ter reagido?</label>
-        <input type="text" name="alternative-reactions" id="alternative-reactions">
-
+        <label for="your-reaction">Sua reação: como você efetivamente agiu após essa emoção?
+            <input type="text" name="your-reaction" id="">
+        </label>
+        
+        <label for="alternative reactions">Reações alternativas: de que outras maneiras você poderia ter reagido?
+            <input type="text" name="alternative-reactions" id="">
+        </label>
+        
         <button>Enviar</button>
-      </div>
-    </section>
-        
-    <section class="diary">
-      <h2>Nos conte mais sobre seu dia</h2>
-      <textarea name="diary" id="diary" cols="30" rows="10"></textarea>
-    </section>
+       </section>
+        <section class="diary">
+            <h2>Nos conte mais sobre seu dia</h2>
+            <textarea name="diary" id="diary" cols="30" rows="10" placeholder="Digite seus pensamentos aqui..."></textarea>
+        </section>
   </main>
+    
+  <footer>
+    <p>copyrights © 2022 Divertidamente - All Rights Reserved -</p>
+  </footer>
 </body>
 </html>
