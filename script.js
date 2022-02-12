@@ -17,7 +17,14 @@ const guardedFeelings = () => {
  
 /* button.addEventListener('click', guardedFeelings);  não existe nenhum elemento no html com a classe, id ou tag button no html o addevente ta quebrando todo codigo js devido a isso deixei comentado!*/
 
-
+// const clickMenu = () => {
+//     const menu = document.querySelector('.nav-bar');
+//     menu.addEventListener('click', () => {
+//         document.getElementById('menu').classList.toggle('change');
+//         document.getElementById('nav').classList.toggle('change');
+//         document.getElementById('menu-bg').classList.toggle('change');
+//     })
+// }
  
 // sentimentos //
 
@@ -55,6 +62,5 @@ const sumEmot = (event) => {
 }; 
 
 window.onload = () => {
-    menuHamburguer();
     li();
 }

@@ -40,15 +40,13 @@ hr {
 }
 
 .logo img {
-    width: 70px;
+  width: 70px;
 }
 
 .title {
   color: var(--icones);
   font-size: 30px;
 }
-
-/* .navBar img {} */
 
 .banner {
   display: flex;
