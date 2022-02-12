@@ -10,8 +10,8 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="images/logo.svg" alt="LOGO">
+    <div id="menu" class="logo">
+      <img src="images/mandala-rosa-logo.svg" id="img-hamburguer" alt="LOGO">
     </div>
     <div class="title">
       <h1>Feelin</h1>
@@ -31,68 +31,65 @@
   </section>
   <main>
     <section class="intro">
-      <img src="images/background.svg" alt="">
+      <img src="images/mandala-branca.svg" class="mandala-first">
       <div class="introduction">
         <hr>
         <h2>Olá tudo bem? é um grande prazer ter você conosco.</h2>
         <hr>
         <p>Para tornar melhor sua experiencia por gentileza informe seu nome e pronomes.</p>
-        <form action="">
-          <input type="text" name="" id="" placeholder="Nome...">
-          <select name="pronouns" id="pronouns" >
-            <option value="neutro" selected>Neutro</option>
-            <option value="ela/dela">ela/dela</option>
-            <option value="ele/dele">ele/dele</option>
-          </select>
-        </form>
+
+        <input type="text" name="" id="" placeholder="Qual é o seu nome...">
+        <select name="pronouns" id="pronouns" >
+          <option value="ela/dela">Ela/Dela</option>
+          <option value="ele/dele">Ele/Dele</option>
+          <option value="neutro" selected>Neutro</option>
+        </select>
+
       </div>
     </section>
 
-    <ul class="sentimento">
-      <li class="emoção" id="raiva" onclick="sumEmoc()"> 
-        <img class="emotImg" src="bravo.png"   alt="raiva">      
-      </li>
-      <li class="emoção" id="tristeza" onclick="sumEmoc()"> 
-        <img class="emotImg" src="triste.png"  alt="tristeza">
-      </li>
-      <li class="emoção" id="medo"     onclick="sumEmoc()">
-        <img class="emotImg" src="medo.png"    alt="medo">
-      </li>
-      <li class="emoção" id="nojo"     onclick="sumEmoc()"> 
-        <img class="emotImg" src="nojo.png"    alt="nojo">
-      </li>
-      <li class="emoção" id="alegria"  onclick="sumEmoc()">
-        <img class="emotImg" src="alegria.png" alt="alegria">
-      </li>
-    </ul>
+    <section id="diary-self-knowledge">
+      <div class="self-knowledge-mandala">
+        <img src="images/mandala-branca.svg" class="mandala-second">
+      </div>
+      <div class="self-knowledge-form">
+        <h1 id="title-question-feeling">Como você está se sentindo hoje</h1>
+        <ul class="sentimento">
+          <li class="emoção" id="raiva" onclick="sumEmoc()"> 
+            <img class="emotImg" src="bravo.png"   alt="raiva">      
+          </li>
+          <li class="emoção" id="tristeza" onclick="sumEmoc()"> 
+            <img class="emotImg" src="triste.png"  alt="tristeza">
+          </li>
+          <li class="emoção" id="medo"     onclick="sumEmoc()">
+            <img class="emotImg" src="medo.png"    alt="medo">
+          </li>
+          <li class="emoção" id="nojo"     onclick="sumEmoc()"> 
+            <img class="emotImg" src="nojo.png"    alt="nojo">
+          </li>
+          <li class="emoção" id="alegria"  onc
+          diary self-knowledgelick="sumEmoc()">
+            <img class="emotImg" src="alegria.png" alt="alegria">
+          </li>
+        </ul>
+        
+        <label for="trigger">Gatilho: que situações dispararam essa emoção em você?</label>
+        <input type="text" name="trigger" id="trigger">
+
+        <label for="your-reaction">Sua reação: como você efetivamente agiu após essa emoção?</label>
+        <input type="text" name="your-reaction" id="your-reaction">
+
+        <label for="alternative reactions">Reações alternativas: de que outras maneiras você poderia ter reagido?</label>
+        <input type="text" name="alternative-reactions" id="alternative-reactions">
+
+        <button>Enviar</button>
+      </div>
+    </section>
         
     <section class="diary">
       <h2>Nos conte mais sobre seu dia</h2>
       <textarea name="diary" id="diary" cols="30" rows="10"></textarea>
     </section>
   </main>
-
-  <form id="teste">
-    <h1>Como você está se sentindo hoje NOME?</h1>
-    <input type="checkbox" name="happiness" id="">
-    <input type="checkbox" name="rage" id="">
-    <input type="checkbox" name="fear" id="">
-    <input type="checkbox" name="disgust" id="">
-    <input type="checkbox" name="sadness" id="">
-    
-    <label for="">Gatilho: que situações dispararam essa emoção em você?
-        <input type="text" name="trigger" id="">
-    </label>
-    
-    <label for="your-reaction">Sua reação: como você efetivamente agiu após essa emoção?
-        <input type="text" name="your-reaction" id="">
-    </label>
-    
-    <label for="alternative reactions">Reações alternativas: de que outras maneiras você poderia ter reagido?
-        <input type="text" name="alternative-reactions" id="">
-    </label>
-    
-    <button>Enviar</button>
-  </form>
 </body>
 </html>
