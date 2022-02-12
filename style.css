@@ -108,8 +108,8 @@ hr {
     color: white;
 }
 
- input {
-    width: 200px;
+.inputLine {
+    width: 300px;
     padding: 7px;
     letter-spacing: 1px;
     color: #ffffff;
@@ -117,7 +117,7 @@ hr {
     border: none;
     background-color: transparent ;
     border-bottom: 1px solid rgb(255, 255, 255);
-    transition: all 2s ease-in-out;
+    transition: all 1s ease-in-out;
     margin: 10px;
   }
 
@@ -137,5 +137,8 @@ hr {
 
 .emotImg{
     max-width: 65px;
+}
+.teste{
+    
 }
     
