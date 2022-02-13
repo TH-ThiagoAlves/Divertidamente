@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@600&family=Roboto:wght@100&family=Yellowtail&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap');
 
 :root {
-  --background: rgb(114, 178, 178);
+  --background: #72B2B2;
   --icones: #FFBEB8;
   --constraste: #FF5757;
   --detalheAmarelos: #F8F19B;
@@ -54,11 +54,12 @@ hr {
 .banner {
   display: flex;
   justify-content: flex-end;
-  background-image: url("images/banner.png");
+  background-image: url("images/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100% 650px;
   height: 500px;
   background-position: 0;
+  box-shadow: 1px 1px 2px black;
 }
 
 .text {
@@ -283,3 +284,6 @@ footer p {
   margin: 0 auto;
 }
 
+#recomendações{
+    background-color: #72B2B2;
+}
