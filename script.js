@@ -3,7 +3,7 @@
 // button.addEventListener();
 const button = document.querySelector('button')
 const form = document.querySelector('form');
-let data = [0, 0, 5, 0, 0];
+let data = [0, 0, 0, 0, 0];
 const emotes = document.querySelectorAll('.emoção');
 const number = Math.max.apply(null, data)
 
