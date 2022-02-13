@@ -1,7 +1,7 @@
 // Constantes globais
 
 // button.addEventListener();
-const button = document.querySelector('button')
+// const button = document.querySelector('button')
 const form = document.querySelector('form');
 let data = [0, 0, 0, 0, 0];
 
