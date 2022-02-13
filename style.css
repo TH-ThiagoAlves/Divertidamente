@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@600&family=Roboto:wght@100&family=Yellowtail&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap');
 
 :root {
-  --background: #72B2B2;
+  --background: rgb(114, 178, 178);
   --icones: #FFBEB8;
   --constraste: #FF5757;
   --detalheAmarelos: #F8F19B;
@@ -37,15 +37,18 @@ hr {
 
 #title-feelin {
   color: var(--icones);
+  font-size: 50px;
 }
 
-.logo img {
+#logo-mandala-pink {
   width: 70px;
 }
 
-.title {
-  color: var(--icones);
-  font-size: 30px;
+.sandwich {
+  width: 35px;
+  height: 5px;
+  background-color: var(--icones);
+  margin: 6px 0;
 }
 
 .banner {
@@ -77,6 +80,7 @@ hr {
   align-items: center;
   padding: 40px;
 }
+
 .intro img {
   width: 30%;
 }
@@ -98,8 +102,6 @@ hr {
   margin:20px;
   font-size: 30px;
 }
-
-.introduction form {}
 
 .diary {
   display: flex;
@@ -147,24 +149,33 @@ input {
   transition: all 1s ease-in-out;
   margin: 10px;
 }
-  
+
+input[type="text"]:focus-visible {
+  outline: 0px solid black;
+}
+
+.sentimento {
+  display: flex;
+  list-style-type: none;
+  gap: 45px;
+}
 
 .inputLine {
-    width: 300px;
-    padding: 7px;
-    letter-spacing: 1px;
-    color: #ffffff;
-    font-size: 13px;
-    border: none;
-    background-color: transparent ;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    transition: all 1s ease-in-out;
-    margin: 10px;
-  }
+  width: 300px;
+  padding: 7px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  border: none;
+  background-color: transparent ;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition: all 1s ease-in-out;
+  margin: 10px;
+}
 
 #diary-self-knowledge {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .self-knowledge-form {
@@ -174,9 +185,15 @@ input {
   text-align: center;
 }
 
+.self-knowledge-mandala {
+  position: absolute;
+  left: 1px;
+}
+
 #title-question-feeling {
   font-size: xx-large;
   font-weight: 400;
+  margin-bottom: 25px;
 }
 
 .mandala-second {
@@ -184,7 +201,7 @@ input {
 }
 
 .mandala-second, .mandala-first {
-  animation: loading 15s linear infinite;
+  animation: loading 25s linear infinite;
 }
 
 @keyframes loading {
@@ -196,23 +213,73 @@ input {
   }
 }
 
+::-webkit-input-placeholder {
+  color: var(--constraste);
+  font-weight: 700;
+}
 
+#name-self-knowledge {
+  color: #FF5757;
+  /* display: none; */
+}
+
+.emotImg {
+  max-width: 65px;
+  margin: auto 5px;
+  transition: 500ms;
+  border-radius: 10%;
+}
+
+.emotImg:hover {
+  max-width: 75px;
+  margin: 0px;
+  transition: all 250ms;
+  box-shadow: 0px 0px 25px #5de9e9;
+  border-radius: 50%;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+}
+
+.questions label {
+  margin: 20px 0px 0px 0px;
+  color: var(--constraste);
+  font-size: x-large;
+  text-shadow: 0 0 red;
+}
+
+.questions input {
+  width: 70%;
+  font-size: 20px;
+  height: 25px;
+}
+
+.questions button {
+  width: 300px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: var(--constraste);
+  margin: 20px auto;
+}
+
+.questions button:hover {
+  background-color: var(--icones);
+  transition: 0.5s;
+}
+
+footer {
+  width: inherit;
+  padding: 20px;
+  background-color: var(--background);
+}
 
 footer p {
-    font-family: 'Open Sans', sans-serif;
-    width: fit-content;
-    margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  width: fit-content;
+  margin: 0 auto;
 }
 
- /* SENTIMENTOS */   
-
-.sentimento {
-display:flex;
-list-style-type: none;
-gap: 45px;
-    
-}
-
-.emotImg{
-max-width: 55px;
-}
