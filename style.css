@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@600&family=Roboto:wght@100&family=Yellowtail&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap');
 
 :root {
-  --background: #72B2B2;
+  --background: rgb(114, 178, 178);
   --icones: #FFBEB8;
   --constraste: #FF5757;
   --detalheAmarelos: #F8F19B;

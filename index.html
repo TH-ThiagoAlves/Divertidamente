@@ -8,10 +8,12 @@
   <title>Divertidamente</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,300&display=swap"
+      rel="stylesheet">
   <link rel="shortcut icon" href="images/mandala-rosa-logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script src="src/script.js" defer></script>
 </head>
 
 <body>
@@ -36,7 +38,6 @@
         </p>
     </div>
   </section>
-
 
   <main>
     <section class="intro">
@@ -66,19 +67,19 @@
           <span id="name-self-knowledge">nome</span>?
         </h1>
         <ul class="sentimento">
-          <li class="emoção" id="alegria"  onclick="sumEmoc()">
+          <li class="emoção" id="alegria"  onclick="sumEmot()">
             <img class="emotImg" src="alegria.png" alt="alegria">
           </li>
-          <li class="emoção" id="tristeza" onclick="sumEmoc()"> 
+          <li class="emoção" id="tristeza" onclick="sumEmot()"> 
             <img class="emotImg" src="triste.png"  alt="tristeza">
           </li>
-          <li class="emoção" id="raiva" onclick="sumEmoc()"> 
+          <li class="emoção" id="raiva"    onclick="sumEmot()"> 
             <img class="emotImg" src="bravo.png"   alt="raiva">      
           </li>
-          <li class="emoção" id="medo"     onclick="sumEmoc()">
+          <li class="emoção" id="medo"     onclick="sumEmot()">
             <img class="emotImg" src="medo.png"    alt="medo">
           </li>
-          <li class="emoção" id="nojo"     onclick="sumEmoc()"> 
+          <li class="emoção" id="nojo"     onclick="sumEmot()"> 
             <img class="emotImg" src="nojo.png"    alt="nojo">
           </li>
         </ul>
@@ -97,12 +98,6 @@
         </label>
     </section>
 
-    <section class="diary">
-      <h2>Nos conte mais sobre seu dia</h2>
-      <textarea name="diary" id="diary" cols="30" rows="10"
-        placeholder="Digite seus pensamentos aqui..."></textarea>
-    </section>
-
     <div id="send-form-style">
       <hr>
       <button id="send-form">Enviar</button>
@@ -110,9 +105,17 @@
     </div>
   </main>
 
+  <figure class="highcharts-figure">
+    <div id="container"></div>
+  </figure>
+
   <footer>
     <p>copyrights © 2022 Divertidamente - All Rights Reserved -</p>
   </footer>
-</body>
 
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</body>
 </html>
