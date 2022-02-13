@@ -47,8 +47,8 @@
         <hr>
         <p>Para tornar melhor sua experiencia por gentileza informe seu nome e pronomes.</p>
 
-        <form action="">
-          <input type="text" class="inputLine" name="" id="" placeholder="Nome...">
+        <form>
+          <input type="text" id="input-line-name" placeholder="Nome...">
           <select name="pronouns" id="pronouns">
             <option value="neutro" selected>Neutro</option>
             <option value="ela/dela">ela/dela</option>
@@ -85,18 +85,16 @@
 
        <section class="questions">
         <label>Gatilho:<br>Que situações dispararam essa emoção em você?
-            <input type="text" name="trigger">
+            <input type="text" name="trigger" id="trigger">
         </label>
         
         <label>Sua reação:<br>Como você efetivamente agiu após essa emoção?
-            <input type="text" name="your-reaction">
+            <input type="text" name="your-reaction" id="your-reaction">
         </label>
         
         <label>Reações alternativas:<br>De que outras maneiras você poderia ter reagido?
-            <input type="text" name="alternative-reactions">
+            <input type="text" name="alternative-reactions" id="alternative-reactions">
         </label>
-        
-        <button>Enviar</button>
     </section>
 
     <section class="diary">
@@ -104,6 +102,12 @@
       <textarea name="diary" id="diary" cols="30" rows="10"
         placeholder="Digite seus pensamentos aqui..."></textarea>
     </section>
+
+    <div id="send-form-style">
+      <hr>
+      <button id="send-form">Enviar</button>
+      <hr>
+    </div>
   </main>
 
   <footer>

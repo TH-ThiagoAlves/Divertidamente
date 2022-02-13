@@ -1,78 +1,75 @@
-// Constantes globais
+const button = document.querySelector('#send-form');
+const nameUser = document.querySelector('#input-line-name');
+const pronouns = document.querySelector('#pronouns');
+const trigger = document.querySelector('#trigger');
+const yourReaction = document.querySelector('#your-reaction');
+const alternativeReactions = document.querySelector('#alternative-reactions');
 
-// button.addEventListener();
-const button = document.querySelector('button')
-const form = document.querySelector('form');
-let data = [0, 0, 0, 0, 0];
+let form = [];
+let emoticon = [0, 0, 0, 0, 0];
 
-// API
+localStorage.getItem('feelings') === null ? ``: 
+form = JSON.parse(localStorage.getItem('feelings'));
 
-const graficoApi = async () => {
-};
-
+let index = form.length - 1
+let dateSaved = parseInt(form[index].data[0] + form[index].data[1]);
+emoticon = form[index].emoticon;
 
 const guardedFeelings = () => {
-    localStorage.setItem('feelings', form.innerHTML)
+  const dia = new Date();
+  const obj = {
+    name: nameUser.value,
+    pronouns: pronouns.value,
+    trigger: trigger.value,
+    yourReaction: yourReaction.value,
+    alternativeReactions: alternativeReactions.value,
+    data: `${dia.getDate()}/${dia.getMonth() + 1}/${dia.getFullYear()}`,
+    emoticon,
+  }
+  form.push(obj)
+  localStorage.setItem('feelings', JSON.stringify(form))
 }
 
-/* button.addEventListener('click', guardedFeelings);  não existe nenhum elemento no html com a classe, id ou tag button no html o addevente ta quebrando todo codigo js devido a isso deixei comentado!*/
-
-// const clickMenu = () => {
-//     const menu = document.querySelector('.nav-bar');
-//     menu.addEventListener('click', () => {
-//         document.getElementById('menu').classList.toggle('change');
-//         document.getElementById('nav').classList.toggle('change');
-//         document.getElementById('menu-bg').classList.toggle('change');
-//     })
-// }
- 
-/* sentimentos e graficos */
-
 const li = () => {
-    document.querySelectorAll('.emoção').forEach(element => {
-        element.addEventListener('click', sumEmot);
-    });
+  document.querySelectorAll('.emoção')
+    .forEach(element => element.addEventListener('click', sumEmot)
+  );
 }
 
 const sumEmot = (event) => {
-    const armz = event.target.parentNode;
-    switch (armz.id) {
-        case 'alegria':
-            data[0] += 1;
-            armz.removeEventListener('click', sumEmot)
-            break
-        case 'tristeza':
-            data[1] += 1;
-            armz.removeEventListener('click', sumEmot)
-            break
-        case 'raiva':
-            data[2] += 1;
-            armz.removeEventListener('click', sumEmot)
-            break
-        case 'medo':
-            data[3] += 1;
-            armz.removeEventListener('click', sumEmot)
-            break
-        case 'nojo':
-            data[4] += 1;
-            armz.removeEventListener('click', sumEmot)
-            break
-    } 
+  const armz = event.target.parentNode;
+  switch (armz.id) {
+    case 'alegria':
+      emoticon[0] += 1;
+      armz.removeEventListener('click', sumEmot)
+    break;
+    case 'tristeza':
+      emoticon[1] += 1;
+      armz.removeEventListener('click', sumEmot)
+    break;
+    case 'raiva':
+      emoticon[2] += 1;
+      armz.removeEventListener('click', sumEmot)
+    break;
+    case 'medo':
+      emoticon[3] += 1;
+      armz.removeEventListener('click', sumEmot)
+    break;
+    case 'nojo':
+      emoticon[4] += 1;
+      armz.removeEventListener('click', sumEmot)
+    break;
+  }
 }; 
-let dateSaved = new Date(); // o valor de date saved precisa ser salvo quando o formulario for enviado e puxado de volta pra fazer a comparação.
-let dateAtual = new Date();
 
 const temporizador = () => {
+  const dateAtual = new Date();
   if (dateSaved.getDay !== dateAtual.getDay) {
       return li(); 
   } 
 }
 
-
-
-
-
-
 window.onload = () => {
-    li();
+  li();
+  button.addEventListener('click', guardedFeelings);
 }
