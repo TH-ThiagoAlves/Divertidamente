@@ -67,19 +67,19 @@
           <span id="name-self-knowledge">nome</span>?
         </h1>
         <ul class="sentimento">
-          <li class="emoção" id="alegria"  onclick="sumEmot()">
+          <li class="emoção" id="alegria"  onclick="sumEmot(event)">
             <img class="emotImg" src="alegria.png" alt="alegria">
           </li>
-          <li class="emoção" id="tristeza" onclick="sumEmot()"> 
+          <li class="emoção" id="tristeza" onclick="sumEmot(event)"> 
             <img class="emotImg" src="triste.png"  alt="tristeza">
           </li>
-          <li class="emoção" id="raiva"    onclick="sumEmot()"> 
+          <li class="emoção" id="raiva"    onclick="sumEmot(event)"> 
             <img class="emotImg" src="bravo.png"   alt="raiva">      
           </li>
-          <li class="emoção" id="medo"     onclick="sumEmot()">
+          <li class="emoção" id="medo"     onclick="sumEmot(event)">
             <img class="emotImg" src="medo.png"    alt="medo">
           </li>
-          <li class="emoção" id="nojo"     onclick="sumEmot()"> 
+          <li class="emoção" id="nojo"     onclick="sumEmot(event)"> 
             <img class="emotImg" src="nojo.png"    alt="nojo">
           </li>
         </ul>
@@ -105,10 +105,12 @@
     </div>
   </main>
 
+ 
   <figure class="highcharts-figure">
     <div id="container"></div>
   </figure>
 
+  <section id="recomendações"></section>
   <footer>
     <p>copyrights © 2022 Divertidamente - All Rights Reserved -</p>
   </footer>
