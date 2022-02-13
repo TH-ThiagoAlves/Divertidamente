@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@600&family=Roboto:wght@100&family=Yellowtail&family=Zen+Kaku+Gothic+Antique:wght@300;400&display=swap');
 
 :root {
-  --background: rgb(114, 178, 178);
+  --background: #72B2B2;
   --icones: #FFBEB8;
   --constraste: #FF5757;
   --detalheAmarelos: #F8F19B;
@@ -56,11 +56,12 @@ hr {
 .banner {
   display: flex;
   justify-content: flex-end;
-  background-image: url("images/banner.png");
+  background-image: url("images/banner.jpg");
   background-repeat: no-repeat;
   background-size: 100% 650px;
   height: 500px;
   background-position: 0;
+  box-shadow: 1px 1px 2px black;
 }
 
 .text {
@@ -115,6 +116,7 @@ hr {
 .diary h2 {
   color: white;
   font-size: 40px;
+  width: 40%;
 }
 
 .diary textarea {
@@ -124,7 +126,7 @@ hr {
   padding: 10px;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-  width: 30%;
+  width: 60%;
 }
 
 select {
@@ -138,6 +140,17 @@ select {
   background-color: transparent ;
   border-bottom: 1px solid rgb(255, 255, 255);
   margin: 10px;
+}
+
+select:focus-visible {
+  outline: 0px solid black;
+}
+
+select option {
+  color: var(--constraste);
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-size: 13px;
 }
 
 input {
@@ -199,7 +212,7 @@ input[type="text"]:focus-visible {
 }
 
 .mandala-second {
-  width: 250px;
+  width: 20%;
 }
 
 .mandala-second, .mandala-first {
@@ -230,6 +243,7 @@ input[type="text"]:focus-visible {
   margin: auto 5px;
   transition: 500ms;
   border-radius: 10%;
+
 }
 
 .emotImg:hover {
@@ -238,6 +252,7 @@ input[type="text"]:focus-visible {
   transition: all 250ms;
   box-shadow: 0px 0px 25px #5de9e9;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .questions {
@@ -285,3 +300,6 @@ footer p {
   margin: 0 auto;
 }
 
+#recomendações{
+    background-color: #72B2B2;
+}
