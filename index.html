@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Divertidamente</title>
+  <title>Feelin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -23,17 +23,26 @@
 
     <h1 class="title" id="title-feelin">Feelin</h1>
 
-    <section class="nav-bar">
+    <section id="container-sandwich">
       <div class='sandwich'></div>
       <div class='sandwich'></div>
       <div class='sandwich'></div>
     </section>
   </header>
 
-  <nav id="menu">
-    <a href="#">Graficos</a>
-    <a href="#">Anotações</a>
-    <a href="#">Recomendações</a>
+  <nav id="menu" style="display: none;">
+    <a href="#container" class="nav-bar-link">
+      <img class="nav-bar-icon" src="images/graficos.png" alt="notepad">
+      Graficos
+    </a>
+    <a href="#diary" class="nav-bar-link">
+      <img class="nav-bar-icon" src="images/notepad.png" alt="notepad">
+      Anotações
+    </a>
+    <a href="#recomendacoes" class="nav-bar-link">
+      <img class="nav-bar-icon" src="images/recomendacoes.png" alt="notepad">
+      Recomendações
+    </a>
   </nav>
 
   <section class="banner">
@@ -105,7 +114,7 @@
         </label>
     </section>
 
-    <section class="diary">
+    <section id="diary">
       <h2>Nos conte mais sobre seu dia</h2>
       <textarea name="diary" id="diary" cols="30" rows="10"
         placeholder="Digite seus pensamentos aqui..."></textarea>
@@ -118,13 +127,32 @@
     </div>
   </main>
 
+  <section id="historical note" style="background-color: #72b2b2;">
+    <div>
+      <img src="images/notepad.png" style="width: 180px;" alt="">
+      <h1>Anotações</h1>
+    </div>
+
+    <select name="" id="">
+      <option value="">13/02/2022</option>
+      <option value="">14/02/2022</option>
+      <option value="">15/02/2022</option>
+      <option value="">16/02/2022</option>
+      <option value="">17/02/2022</option>
+    </select>
+
+    <p>IDados como emoção predominante, respostas das
+      perguntas feitas e conteudos que foram indicados,
+      grafico do mês/semana referente a pesquisa.</p>
+
+  </section>
  
   <figure class="highcharts-figure">
     <div id="container"></div>
   </figure>
 
-  <section id="recomendações"></section>
-  
+  <section id="recomendacoes"></section>
+
   <footer>
     <p>copyrights © 2022 Divertidamente - All Rights Reserved -</p>
   </footer>
