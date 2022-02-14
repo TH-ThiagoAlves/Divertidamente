@@ -5,6 +5,11 @@ const trigger = document.querySelector('#trigger');
 const yourReaction = document.querySelector('#your-reaction');
 const alternativeReactions = document.querySelector('#alternative-reactions');
 const emotes = document.querySelectorAll('.emoção');
+const buttonSandwich = document.querySelector('#container-sandwich');
+const menu = document.querySelector('#menu');
+const maxResults = 4;
+const player = document.querySelector('.player')
+const video = document.createElement('div')
 
 let form = [];
 let emoticon = [0, 0, 0, 0, 0];
@@ -146,6 +151,25 @@ const alterarHtml = (objet) => {
                            <li>${objet.mensagem}<li>
                            <li>${objet.bonus}<li>
                            </ul>`
+}
+                           
+const loadVideos = async (emotion) => {
+  const info = await getApi(API_KEY, emotion)
+  info.forEach((item) => {
+    const frame = document.createElement('iframe');
+    frame.src = `http://www.youtube.com/embed/${item.id.videoId}`;
+    frame.width = '380';
+    frame.height = '315';
+    frame.frameborder = '0';
+    frame.allowFullscreen;
+    video.appendChild(frame);
+    player.appendChild(video);
+
+  })
+}
+
+const alterarHtml = (object) => {
+  return loadVideos(object);
 };
 
 const analise2 = () => {
@@ -164,65 +188,31 @@ const analise2 = () => {
       return alterarHtml(medo);
     case 4:
       return alterarHtml(nojo);
+    default:
+      return alterarHtml(generico);
   }
+  
 }
-
-
-
 
 const analise = () => {
   const verifica = emoticon.filter((element) => element == number);
-  if (verifica.length >= 1) alterarHtml(generico);
-  return analise2();
+  if (verifica.length >= 1){
+     return analise2();
+  }
+ 
 };
 
-const alegria = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 'c',
-  mensagem: 'd',
-  bonus: 'a',
+const alegria = 'como lidar com a alegria';
 
-}
+const tristeza = 'como lidar com a tristeza';
 
-const tristeza = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 'c',
-  mensagem: 'd',
-  bonus: 'a',
-}
+const raiva = 'como lidar com a raiva';
 
-const raiva = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 'c',
-  mensagem: 'd',
-  bonus: 'a',
-}
-const medo = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 's',
-  mensagem: 'd',
-  bonus: 'c',
-}
+const medo = 'como lidar com o medo';
 
-const nojo = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 'c',
-  mensagem: 'd',
-  bonus: 'v',
-}
+const nojo = 'como lidar com o nojo';
 
-const generico = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 'c',
-  mensagem: 'd',
-  bonus: 'v',
-}
+const generico = 'Meditação!!';
 
 window.onload = () => {
   li();
