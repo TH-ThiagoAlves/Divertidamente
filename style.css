@@ -13,6 +13,7 @@
   padding: 0;
   color: white;
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -21,6 +22,9 @@ header {
   align-items: center;
   padding: 5px 20px;
   background-color: white;
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 1;
 }
 
 main {
@@ -44,14 +48,45 @@ hr {
   width: 70px;
 }
 
-.nav-bar {
+#container-sandwich {
   cursor: pointer;
   opacity: 0.8;
 }
 
-.nav-bar:hover {
+#container-sandwich:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+#menu {
+  position: fixed;
+  right: 1px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 21px;
+  margin: 104px 60px 0px 0px;
+  background-color: white;
+  z-index: 1;
+}
+
+.nav-bar-link {
+  color: #f5acb7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.nav-bar-link:hover {
+  opacity: 1;
+}
+
+img.nav-bar-icon {
+  width: 60px;
+  margin-right: 20px;
 }
 
 .sandwich {
@@ -64,12 +99,13 @@ hr {
 .banner {
   display: flex;
   justify-content: flex-end;
-  background-image: url("images/banner.jpg");
+  background-image: url(images/banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
   background-position: bottom;
   box-shadow: 1px 1px 2px black;
+  padding-top: 90px;
 }
 
 .text {
@@ -114,19 +150,19 @@ hr {
   font-size: 30px;
 }
 
-.diary {
+#diary {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 40px;
 }
 
-.diary h2 {
+#diary h2 {
   color: white;
   font-size: 40px;
 }
 
-.diary textarea {
+#diary textarea {
   background-color: rgba(255, 255, 255, 0.315);
   border: 2px solid var(--icones);
   border-radius: 15px;
@@ -289,10 +325,11 @@ input[type="text"]:focus-visible {
   font-size: 20px;
   background-color: var(--constraste);
   margin: 20px auto;
+  opacity: 0.8;
 }
 
 #send-form:hover {
-  opacity: 0.8;
+  opacity: 1;
   transition: 0.5s;
 }
 
@@ -310,6 +347,6 @@ footer p {
   font-weight: 700;
 }
 
-#recomendações{
-    background-color: #72B2B2;
+#recomendacoes{
+  background-color: #72B2B2;
 }

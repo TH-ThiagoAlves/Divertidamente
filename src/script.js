@@ -5,6 +5,8 @@ const trigger = document.querySelector('#trigger');
 const yourReaction = document.querySelector('#your-reaction');
 const alternativeReactions = document.querySelector('#alternative-reactions');
 const emotes = document.querySelectorAll('.emoção');
+const buttomSandwich = document.querySelector('#container-sandwich');
+const menu = document.querySelector('#menu');
 
 let form = [];
 let emoticon = [0, 0, 0, 0, 0];
@@ -129,7 +131,7 @@ const temporizador = () => {
 }
 
 const alterarHtml = (objet) => {
-    const recomenda = document.querySelector('#recomendações');
+    const recomenda = document.querySelector('#recomendacoes');
     recomenda.innerHTML = `<ul>
                            <li>${objet.meditação}<li>
                            <li>${objet.artigo}<li>
@@ -214,9 +216,20 @@ const generico = {
 
 window.onload = () => {
   li();
-  grafico();
+  grafico(emoticon);
   analise();
   button.addEventListener('click', guardedFeelings);
+  
+    buttomSandwich.addEventListener('click', () => {
+        if (menu.style.display === 'none') {
+            menu.style.display = 'inline-grid';
+        } else {
+            menu.style.display = 'none';
+        }
+    });
+  
+  
+ 
 }
 
 //module.exports = { guardedFeelings, li, sumEmot}
