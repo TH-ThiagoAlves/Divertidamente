@@ -231,5 +231,3 @@ window.onload = () => {
   button.addEventListener('click', guardedFeelings);
   temporizador();
 }
-
-//module.exports = { guardedFeelings, li, sumEmot}
