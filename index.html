@@ -13,6 +13,7 @@
       rel="stylesheet">
   <link rel="shortcut icon" href="images/mandala-rosa-logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <script src="loadYouTubeApi.js" defer></script>
   <script src="src/script.js" defer></script>
 </head>
 
@@ -22,20 +23,26 @@
 
     <h1 class="title" id="title-feelin">Feelin</h1>
 
-    <nav class="nav-bar">
+    <section class="nav-bar">
       <div class='sandwich'></div>
       <div class='sandwich'></div>
       <div class='sandwich'></div>
-    </nav>
+    </section>
   </header>
+
+  <nav id="menu">
+    <a href="#">Graficos</a>
+    <a href="#">Anotações</a>
+    <a href="#">Recomendações</a>
+  </nav>
 
   <section class="banner">
     <div class="text">
       <h2>Se auto conheça melhor com Feelin</h2>
-        <p>texto explicando os objetivos e
-          como utilizar o site de forma
-          remida pratica e objetiva.
-        </p>
+      <p>texto explicando os objetivos e
+        como utilizar o site de forma
+        remida pratica e objetiva.
+      </p>
     </div>
   </section>
 
@@ -116,7 +123,12 @@
     <div id="container"></div>
   </figure>
 
-  <section id="recomendações"></section>
+  <section id="recomendações">
+<!--     <iframe width="560" height="315" src="https://www.youtube.com/embed/F2-mMlApzqM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <div id="player"></div>
+
+
+  </section>
   <footer>
     <p>copyrights © 2022 Divertidamente - All Rights Reserved -</p>
   </footer>
@@ -125,5 +137,7 @@
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/export-data.js"></script>
   <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+</script>
 </body>
 </html>

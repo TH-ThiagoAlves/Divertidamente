@@ -43,7 +43,7 @@ const il = () => {
   });
 }
 
-const grafico = () => {
+const grafico = (emoticon) => {
   Highcharts.chart('container', {
     chart: {
       plotBackgroundColor: null,
@@ -99,23 +99,23 @@ const sumEmot = (event) => {
   switch (armz.id) {
     case 'alegria':
       emoticon[0] += 1;
-      grafico();
+      grafico(emoticon);
       return il();
     case 'tristeza':
       emoticon[1] += 1;
-      grafico();
+      grafico(emoticon);
       return il();
     case 'raiva':
       emoticon[2] += 1;
-      grafico();
+      grafico(emoticon);
       return il();
     case 'medo':
       emoticon[3] += 1;
-      grafico();
+      grafico(emoticon);
       return il();
     case 'nojo':
       emoticon[4] += 1;
-      grafico();
+      grafico(emoticon);
       return il();
   }
 };
