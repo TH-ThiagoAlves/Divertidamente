@@ -9,7 +9,6 @@ const buttonSandwich = document.querySelector('#container-sandwich');
 const menu = document.querySelector('#menu');
 const maxResults = 4;
 const player = document.querySelector('.player')
-const video = document.createElement('div')
 
 let form = [];
 let emoticon = [0, 0, 0, 0, 0];
@@ -151,8 +150,7 @@ const loadVideos = async (emotion) => {
     frame.height = '315';
     frame.frameborder = '0';
     frame.allowFullscreen;
-    video.appendChild(frame);
-    player.appendChild(video);
+    player.appendChild(frame);
 
   })
 }
