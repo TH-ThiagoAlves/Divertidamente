@@ -5,8 +5,6 @@ const trigger = document.querySelector('#trigger');
 const yourReaction = document.querySelector('#your-reaction');
 const alternativeReactions = document.querySelector('#alternative-reactions');
 const emotes = document.querySelectorAll('.emoção');
-const buttonSandwich = document.querySelector('#container-sandwich');
-const menu = document.querySelector('#menu');
 
 let form = [];
 let emoticon = [0, 0, 0, 0, 0];
@@ -39,7 +37,6 @@ const li = () => {
     element.addEventListener('click', sumEmot);
   });
 }
-
 const il = () => {
  emotes.forEach(element => {
    element.removeEventListener('click', sumEmot);
@@ -124,7 +121,7 @@ const sumEmot = (event) => {
   }
 };
 
-const temporizador = () => {
+ const temporizador = () => {
   let dateAtual = '';
   const index = JSON.parse(localStorage.getItem('feelings')).length -1;
   dateSaved =  JSON.parse(localStorage.getItem('feelings'))[index].data;
@@ -134,20 +131,21 @@ const temporizador = () => {
   }
   if (dateSaved !== dateAtual) {
     return li();
+    
   }else{
     return il();
   }
 }; 
 
 const alterarHtml = (objet) => {
-  const recomenda = document.querySelector('#recomendacoes');
+  const recomenda = document.querySelector('#recomendações');
   recomenda.innerHTML = `<ul>
-                          <li>${objet.meditação}<li>
-                          <li>${objet.artigo}<li>
-                          <li>${objet.video}<li>
-                          <li>${objet.mensagem}<li>
-                          <li>${objet.bonus}<li>
-                         </ul>`
+                           <li>${objet.meditação}<li>
+                           <li>${objet.artigo}<li>
+                           <li>${objet.video}<li>
+                           <li>${objet.mensagem}<li>
+                           <li>${objet.bonus}<li>
+                           </ul>`
 };
 
 const analise2 = () => {
@@ -169,6 +167,9 @@ const analise2 = () => {
   }
 }
 
+
+
+
 const analise = () => {
   const verifica = emoticon.filter((element) => element == number);
   if (verifica.length >= 1) alterarHtml(generico);
@@ -181,6 +182,7 @@ const alegria = {
   video: 'c',
   mensagem: 'd',
   bonus: 'a',
+
 }
 
 const tristeza = {
@@ -198,7 +200,6 @@ const raiva = {
   mensagem: 'd',
   bonus: 'a',
 }
-
 const medo = {
   meditação: 'a',
   artigo: 'b',
@@ -227,15 +228,6 @@ window.onload = () => {
   li();
   grafico(emoticon);
   analise();
-  temporizador();
-
   button.addEventListener('click', guardedFeelings);
-  
-  buttonSandwich.addEventListener('click', () => {
-    if (menu.style.display === 'none') {
-      menu.style.display = 'inline-grid';
-    } else {
-      menu.style.display = 'none';
-    }
-  });
+  temporizador();
 }
