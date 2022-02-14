@@ -41,7 +41,6 @@ const li = () => {
     element.addEventListener('click', sumEmot);
   });
 }
-
 const il = () => {
  emotes.forEach(element => {
    element.removeEventListener('click', sumEmot);
@@ -126,7 +125,7 @@ const sumEmot = (event) => {
   }
 };
 
-const temporizador = () => {
+ const temporizador = () => {
   let dateAtual = '';
   const index = JSON.parse(localStorage.getItem('feelings')).length -1;
   dateSaved =  JSON.parse(localStorage.getItem('feelings'))[index].data;
@@ -136,11 +135,12 @@ const temporizador = () => {
   }
   if (dateSaved !== dateAtual) {
     return li();
+    
   }else{
     return il();
   }
 }; 
-
+                           
 const loadVideos = async (emotion) => {
   const info = await getApi(API_KEY, emotion)
   info.forEach((item) => {
@@ -191,29 +191,20 @@ const analise = () => {
 
 const alegria = 'como lidar com a alegria';
 
-const tristeza = 'como lidar com a tristeza'
+const tristeza = 'como lidar com a tristeza';
 
-const raiva = 'como lidar com a raiva'
+const raiva = 'como lidar com a raiva';
 
-const medo = 'como lidar com o medo'
+const medo = 'como lidar com o medo';
 
-const nojo = 'como lidar com o nojo'
+const nojo = 'como lidar com o nojo';
 
-const generico = 'Meditação!!'
+const generico = 'Meditação!!';
 
 window.onload = () => {
   li();
   grafico(emoticon);
   analise();
-  temporizador();
-
   button.addEventListener('click', guardedFeelings);
-  
-  buttonSandwich.addEventListener('click', () => {
-    if (menu.style.display === 'none') {
-      menu.style.display = 'inline-grid';
-    } else {
-      menu.style.display = 'none';
-    }
-  });
+  temporizador();
 }
