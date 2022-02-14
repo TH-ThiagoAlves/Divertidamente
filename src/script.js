@@ -7,6 +7,9 @@ const alternativeReactions = document.querySelector('#alternative-reactions');
 const emotes = document.querySelectorAll('.emoção');
 const buttonSandwich = document.querySelector('#container-sandwich');
 const menu = document.querySelector('#menu');
+const maxResults = 4;
+const player = document.querySelector('.player')
+const video = document.createElement('div')
 
 let form = [];
 let emoticon = [0, 0, 0, 0, 0];
@@ -139,15 +142,33 @@ const temporizador = () => {
   }
 }; 
 
-const alterarHtml = (objet) => {
-  const recomenda = document.querySelector('#recomendacoes');
+const loadVideos = async (emotion) => {
+  console.log(emotion)
+  const info = await getApi(API_KEY, emotion)
+  info.forEach((item) => {
+    const frame = document.createElement('iframe');
+/*     let { width, height, frameborder, allowFullscreen} = frame; */
+    frame.src = `http://www.youtube.com/embed/${item.id.videoId}`;
+    frame.width = '380';
+    frame.height = '315';
+    frame.frameborder = '0';
+    frame.allowFullscreen;
+    video.appendChild(frame);
+    player.appendChild(video);
+
+  })
+}
+
+const alterarHtml = (object) => {
+  /* const recomenda = document.querySelector('#recomendacoes');
   recomenda.innerHTML = `<ul>
                           <li>${objet.meditação}<li>
                           <li>${objet.artigo}<li>
                           <li>${objet.video}<li>
                           <li>${objet.mensagem}<li>
                           <li>${objet.bonus}<li>
-                         </ul>`
+                         </ul>` */
+  return loadVideos(object);
 };
 
 const analise2 = () => {
@@ -175,26 +196,19 @@ const analise = () => {
   return analise2();
 };
 
-const alegria = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 'c',
-  mensagem: 'd',
-  bonus: 'a',
-}
+const alegria = 'como lidar com a alegria';
 
-const tristeza = {
-  meditação: 'a',
-  artigo: 'b',
-  video: 'c',
-  mensagem: 'd',
-  bonus: 'a',
-}
+const tristeza = 'como lidar com a tristeza'
+
+
 
 const raiva = {
   meditação: 'a',
   artigo: 'b',
-  video: 'c',
+  video: () => {
+    const emotion = 'como lidar com a tristeza'
+    return loadVideos(emotion)
+  },
   mensagem: 'd',
   bonus: 'a',
 }
@@ -202,7 +216,10 @@ const raiva = {
 const medo = {
   meditação: 'a',
   artigo: 'b',
-  video: 's',
+  video: () => {
+    const emotion = 'como lidar com a tristeza'
+    return loadVideos(emotion)
+  },
   mensagem: 'd',
   bonus: 'c',
 }
@@ -210,7 +227,10 @@ const medo = {
 const nojo = {
   meditação: 'a',
   artigo: 'b',
-  video: 'c',
+  video: () => {
+    const emotion = 'como lidar com a tristeza'
+    return loadVideos(emotion)
+  },
   mensagem: 'd',
   bonus: 'v',
 }
@@ -218,7 +238,10 @@ const nojo = {
 const generico = {
   meditação: 'a',
   artigo: 'b',
-  video: 'c',
+  video: () => {
+    const emotion = 'como lidar com a tristeza'
+    return loadVideos(emotion)
+  },
   mensagem: 'd',
   bonus: 'v',
 }
