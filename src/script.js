@@ -141,17 +141,6 @@ const sumEmot = (event) => {
     return il();
   }
 }; 
-
-const alterarHtml = (objet) => {
-  const recomenda = document.querySelector('#recomendações');
-  recomenda.innerHTML = `<ul>
-                           <li>${objet.meditação}<li>
-                           <li>${objet.artigo}<li>
-                           <li>${objet.video}<li>
-                           <li>${objet.mensagem}<li>
-                           <li>${objet.bonus}<li>
-                           </ul>`
-}
                            
 const loadVideos = async (emotion) => {
   const info = await getApi(API_KEY, emotion)
