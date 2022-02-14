@@ -12,7 +12,7 @@ const getApi = async (API_KEY, emotion) => {
     return data.items;
   }
   catch(error) {
-    return error;
+    console.log(error)
   }
 }
 

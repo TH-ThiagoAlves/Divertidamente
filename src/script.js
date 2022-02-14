@@ -143,11 +143,9 @@ const temporizador = () => {
 }; 
 
 const loadVideos = async (emotion) => {
-  console.log(emotion)
   const info = await getApi(API_KEY, emotion)
   info.forEach((item) => {
     const frame = document.createElement('iframe');
-/*     let { width, height, frameborder, allowFullscreen} = frame; */
     frame.src = `http://www.youtube.com/embed/${item.id.videoId}`;
     frame.width = '380';
     frame.height = '315';
@@ -160,14 +158,6 @@ const loadVideos = async (emotion) => {
 }
 
 const alterarHtml = (object) => {
-  /* const recomenda = document.querySelector('#recomendacoes');
-  recomenda.innerHTML = `<ul>
-                          <li>${objet.meditação}<li>
-                          <li>${objet.artigo}<li>
-                          <li>${objet.video}<li>
-                          <li>${objet.mensagem}<li>
-                          <li>${objet.bonus}<li>
-                         </ul>` */
   return loadVideos(object);
 };
 
@@ -187,64 +177,31 @@ const analise2 = () => {
       return alterarHtml(medo);
     case 4:
       return alterarHtml(nojo);
+    default:
+      return alterarHtml(generico);
   }
+  
 }
 
 const analise = () => {
   const verifica = emoticon.filter((element) => element == number);
-  if (verifica.length >= 1) alterarHtml(generico);
-  return analise2();
+  if (verifica.length >= 1){
+     return analise2();
+  }
+ 
 };
 
 const alegria = 'como lidar com a alegria';
 
 const tristeza = 'como lidar com a tristeza'
 
+const raiva = 'como lidar com a raiva'
 
+const medo = 'como lidar com o medo'
 
-const raiva = {
-  meditação: 'a',
-  artigo: 'b',
-  video: () => {
-    const emotion = 'como lidar com a tristeza'
-    return loadVideos(emotion)
-  },
-  mensagem: 'd',
-  bonus: 'a',
-}
+const nojo = 'como lidar com o nojo'
 
-const medo = {
-  meditação: 'a',
-  artigo: 'b',
-  video: () => {
-    const emotion = 'como lidar com a tristeza'
-    return loadVideos(emotion)
-  },
-  mensagem: 'd',
-  bonus: 'c',
-}
-
-const nojo = {
-  meditação: 'a',
-  artigo: 'b',
-  video: () => {
-    const emotion = 'como lidar com a tristeza'
-    return loadVideos(emotion)
-  },
-  mensagem: 'd',
-  bonus: 'v',
-}
-
-const generico = {
-  meditação: 'a',
-  artigo: 'b',
-  video: () => {
-    const emotion = 'como lidar com a tristeza'
-    return loadVideos(emotion)
-  },
-  mensagem: 'd',
-  bonus: 'v',
-}
+const generico = 'Meditação!!'
 
 window.onload = () => {
   li();
